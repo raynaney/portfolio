@@ -71,6 +71,9 @@
   }
 }
 
+#wordMod {
+}
+
 .title {
   display: flex;
   flex-direction: column;
@@ -156,9 +159,9 @@
   }
 
   &[data-plus='true']::before {
-    content: '+';
+    content: ' ';
     margin-right: 10px;
-    opacity: 0.4;
+    opacity: 0.5;
   }
 
   &[data-status='entering'] {
