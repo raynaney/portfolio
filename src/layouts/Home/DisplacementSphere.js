@@ -63,7 +63,7 @@ export const DisplacementSphere = props => {
     renderer.current.setPixelRatio(1);
     renderer.current.outputEncoding = sRGBEncoding;
 
-    camera.current = new PerspectiveCamera(54, innerWidth / innerHeight, 0.1, 100);
+    camera.current = new PerspectiveCamera(120, innerWidth / innerHeight, 0.1, 100);
     camera.current.position.z = 52;
 
     scene.current = new Scene();
@@ -81,7 +81,7 @@ export const DisplacementSphere = props => {
     };
 
     startTransition(() => {
-      geometry.current = new SphereBufferGeometry(32, 128, 128);
+      geometry.current = new SphereBufferGeometry(50, 120, 120);
       sphere.current = new Mesh(geometry.current, material.current);
       sphere.current.position.z = 0;
       sphere.current.modifier = Math.random();
@@ -95,7 +95,7 @@ export const DisplacementSphere = props => {
   }, []);
 
   useEffect(() => {
-    const dirLight = new DirectionalLight(colorWhite, 0.6);
+    const dirLight = new DirectionalLight(colorWhite, 0.3);
     const ambientLight = new AmbientLight(colorWhite, themeId === 'light' ? 0.8 : 0.1);
 
     dirLight.position.z = 200;

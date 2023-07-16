@@ -59,11 +59,11 @@ export function VolkiharKnight() {
           __html: `
             [data-theme='dark'] {
               --rgbPrimary: 240 211 150;
-              --rgbAccent: 240 211 150;
+              --rgbAccent: 255 77 0;
             }
             [data-theme='light'] {
               --rgbPrimary: 134 99 23;
-              --rgbAccent: 134 99 23;
+              --rgbAccent: 255 77 0;
             }
           `,
         }}

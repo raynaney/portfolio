@@ -8,12 +8,8 @@ export const navLinks = [
     pathname: '/#details',
   },
   {
-    label: 'Articles',
-    pathname: '/articles',
-  },
-  {
-    label: 'Contact',
-    pathname: '/contact',
+    label: 'Papers',
+    pathname: '/papers',
   },
 ];
 

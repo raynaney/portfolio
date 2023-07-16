@@ -110,9 +110,9 @@ export const Model = ({
     scene.current.add(modelGroup.current);
 
     // Lighting
-    const ambientLight = new AmbientLight(0xffffff, 1.2);
-    const keyLight = new DirectionalLight(0xffffff, 1.1);
-    const fillLight = new DirectionalLight(0xffffff, 0.8);
+    const ambientLight = new AmbientLight(0xcc0000, 1.2);
+    const keyLight = new DirectionalLight(0xcc0000, 1.1);
+    const fillLight = new DirectionalLight(0xcc0000, 0.8);
 
     fillLight.position.set(-6, 2, 2);
     keyLight.position.set(0.5, 0, 0.866);

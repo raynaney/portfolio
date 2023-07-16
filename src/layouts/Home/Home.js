@@ -68,9 +68,8 @@ export const Home = () => {
   return (
     <div className={styles.home}>
       <Meta
-        title="Designer + Developer"
-        description="Design portfolio of Hamish Williams — a product designer working on web & mobile
-          apps with a focus on motion, experience design, and accessibility."
+        title="Researcher"
+        description="Portfolio of Rayna Ney - Human Compter Interaction Researcher."
       />
       <Intro
         id="intro"
@@ -83,7 +82,7 @@ export const Home = () => {
         sectionRef={projectOne}
         visible={visibleSections.includes(projectOne.current)}
         index={1}
-        title="Designing the future of education"
+        title="Cardiac Interoception"
         description="Designing a platform to help educators build better online courseware"
         buttonText="View project"
         buttonLink="/projects/smart-sparrow"
@@ -133,14 +132,9 @@ export const Home = () => {
         buttonText="View project"
         buttonLink="/projects/slice"
         model={{
-          type: 'laptop',
+          type: 'handle',
           alt: 'Annotating a biomedical image in the Slice app',
-          textures: [
-            {
-              srcSet: [sliceTexture, sliceTextureLarge],
-              placeholder: sliceTexturePlaceholder,
-            },
-          ],
+          textures: [{}],
         }}
       />
       <Profile
