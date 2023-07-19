@@ -2,6 +2,7 @@ import projectKatakana from 'assets/katakana-project.svg?url';
 import { Button } from 'components/Button';
 import { Divider } from 'components/Divider';
 import { Heading } from 'components/Heading';
+import { Image } from 'components/Image';
 import { deviceModels } from 'components/Model/deviceModels';
 import { Section } from 'components/Section';
 import { Text } from 'components/Text';
@@ -12,6 +13,10 @@ import dynamic from 'next/dynamic';
 import { useState } from 'react';
 import { cssProps, media } from 'utils/style';
 import styles from './ProjectSummary.module.css';
+
+import profileImgLarge from 'assets/360renderNew.jpeg';
+import profileImgPlaceholder from 'assets/360renderNew.jpeg';
+import profileImg from 'assets/profile.jpg';
 
 const Model = dynamic(() => import('components/Model').then(mod => mod.Model));
 
@@ -26,6 +31,7 @@ export const ProjectSummary = ({
   buttonText,
   buttonLink,
   alternate,
+  custom,
   ...rest
 }) => {
   const [focused, setFocused] = useState(false);
@@ -37,6 +43,7 @@ export const ProjectSummary = ({
   const indexText = index < 10 ? `0${index}` : index;
   const phoneSizes = `(max-width: ${media.tablet}px) 30vw, 20vw`;
   const laptopSizes = `(max-width: ${media.tablet}px) 80vw, 40vw`;
+  const handleSizes = `(max-width: ${media.tablet}px) 30vw, 20vw`;
 
   const renderKatakana = (device, visible) => (
     <svg
@@ -89,59 +96,26 @@ export const ProjectSummary = ({
 
   const renderPreview = visible => (
     <div className={styles.preview}>
-      {model.type === 'laptop' && (
-        <>
-          {renderKatakana('laptop', visible)}
-          <div className={styles.model} data-device="laptop">
-            <Model
-              alt={model.alt}
-              cameraPosition={{ x: 0, y: 0, z: 8 }}
-              showDelay={700}
-              show={visible}
-              models={[
-                {
-                  ...deviceModels.laptop,
-                  texture: {
-                    ...model.textures[0],
-                    sizes: laptopSizes,
-                  },
-                },
-              ]}
-            />
-          </div>
-        </>
-      )}
-      {model.type === 'phone' && (
-        <>
-          {renderKatakana('phone', visible)}
-          <div className={styles.model} data-device="phone">
-            <Model
-              alt={model.alt}
-              cameraPosition={{ x: 0, y: 0, z: 11.5 }}
-              showDelay={300}
-              show={visible}
-              models={[
-                {
-                  ...deviceModels.phone,
-                  position: { x: -0.6, y: 1.1, z: 0 },
-                  texture: {
-                    ...model.textures[0],
-                    sizes: phoneSizes,
-                  },
-                },
-                {
-                  ...deviceModels.phone,
-                  position: { x: 0.6, y: -0.5, z: 0.3 },
-                  texture: {
-                    ...model.textures[1],
-                    sizes: phoneSizes,
-                  },
-                },
-              ]}
-            />
-          </div>
-        </>
-      )}
+      <div className={styles.custom}>
+        <Image
+          reveal
+          delay={100}
+          placeholder={profileImgPlaceholder}
+          srcSet={[profileImg, profileImgLarge]}
+          sizes={`(max-width: ${media.mobile}px) 100vw, 480px`}
+          alt="Me standing in front of the Torii on Miyajima, an island off the coast of Hiroshima in Japan"
+        />
+        <svg
+          aria-hidden="true"
+          width="0"
+          height="765"
+          viewBox="0 0 135 765"
+          className={styles.svg}
+          data-visible={visible}
+        >
+          <use href={`#`} />
+        </svg>
+      </div>
     </div>
   );
 

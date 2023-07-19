@@ -1,6 +1,6 @@
 import profileKatakana from 'assets/katakana-profile.svg?url';
-import profileImgLarge from 'assets/profile-large.jpg';
-import profileImgPlaceholder from 'assets/profile-placeholder.jpg';
+import profileImgLarge from 'assets/360renderNew.jpeg';
+import profileImgPlaceholder from 'assets/360renderNew.jpeg';
 import profileImg from 'assets/profile.jpg';
 import { Button } from 'components/Button';
 import { DecoderText } from 'components/DecoderText';
@@ -14,6 +14,7 @@ import { Transition } from 'components/Transition';
 import { Fragment, useState } from 'react';
 import { media } from 'utils/style';
 import styles from './Profile.module.css';
+import { useEffect, useRef } from 'react';
 
 const ProfileText = ({ visible, titleId }) => (
   <Fragment>
@@ -38,6 +39,18 @@ const ProfileText = ({ visible, titleId }) => (
 export const Profile = ({ id, visible, sectionRef }) => {
   const [focused, setFocused] = useState(false);
   const titleId = `${id}-title`;
+  const aframeSceneRef = useRef();
+
+  // This useEffect hook ensures that A-Frame gets cleaned up properly
+  useEffect(() => {
+    const aframeEl = aframeSceneRef.current;
+
+    return () => {
+      // if (aframeEl && aframeEl.parentNode) {
+      //   aframeEl.parentNode.removeChild(aframeEl);
+      // }
+    };
+  }, []);
 
   return (
     <Section

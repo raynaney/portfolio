@@ -6,7 +6,7 @@
   margin: 120px 0;
   position: relative;
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
 
   @media (--mediaDesktop) {
@@ -85,14 +85,17 @@
   width: 100%;
 }
 
-.model {
-  --width: 180%;
+.custom {
+  /* --width: 180%; */
   --aspectRatio: 12 / 10;
+
+  display: flex;
+  align-items: center;
 
   min-width: var(--width);
   aspect-ratio: var(--aspectRatio);
-  display: grid;
-  position: relative;
+  /* display: grid;
+  position: relative; */
 
   &[data-device='laptop'] {
     top: 6%;

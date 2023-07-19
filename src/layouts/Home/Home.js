@@ -82,20 +82,10 @@ export const Home = () => {
         sectionRef={projectOne}
         visible={visibleSections.includes(projectOne.current)}
         index={1}
-        title="Cardiac Interoception"
-        description="Designing a platform to help educators build better online courseware"
+        title="Cardiac Interoception in Virtual Reality"
+        description="Exploring how we perceive our own heart rate during digital experiences, like in virtual reality, and how these perceptions can be influenced or even mistaken. The findings could potentially shape more immersive digital experiences and therapies that respond to our bodily reactions."
         buttonText="View project"
         buttonLink="/projects/smart-sparrow"
-        model={{
-          type: 'laptop',
-          alt: 'Smart Sparrow lesson builder',
-          textures: [
-            {
-              srcSet: [sprTexture, sprTextureLarge],
-              placeholder: sprTexturePlaceholder,
-            },
-          ],
-        }}
       />
       <ProjectSummary
         id="project-2"
