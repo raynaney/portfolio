@@ -82,10 +82,11 @@ export const Home = () => {
         sectionRef={projectOne}
         visible={visibleSections.includes(projectOne.current)}
         index={1}
-        title="Cardiac Interoception in Virtual Reality"
+        title="EEG-based Evaluation of Motor Skill Acquisition in Virtual and Physical Environments "
         description="Exploring how we perceive our own heart rate during digital experiences, like in virtual reality, and how these perceptions can be influenced or even mistaken. The findings could potentially shape more immersive digital experiences and therapies that respond to our bodily reactions."
         buttonText="View project"
         buttonLink="/projects/smart-sparrow"
+        imageSrc=""
       />
       <ProjectSummary
         id="project-2"
@@ -93,32 +94,19 @@ export const Home = () => {
         sectionRef={projectTwo}
         visible={visibleSections.includes(projectTwo.current)}
         index={2}
-        title="Video game progress tracking"
-        description="Design and development for a video game tracking app built in React Native"
+        title="Cardiac Interoception in Virtual Reality"
+        description="Exploring how we perceive our own heart rate during digital experiences, like in virtual reality, and how these perceptions can be influenced or even mistaken. The findings could potentially shape more immersive digital experiences and therapies that respond to our bodily reactions."
         buttonText="View website"
         buttonLink="https://gamestack.hamishw.com"
-        model={{
-          type: 'phone',
-          alt: 'App login screen',
-          textures: [
-            {
-              srcSet: [gamestackTexture, gamestackTextureLarge],
-              placeholder: gamestackTexturePlaceholder,
-            },
-            {
-              srcSet: [gamestackTexture2, gamestackTexture2Large],
-              placeholder: gamestackTexture2Placeholder,
-            },
-          ],
-        }}
+        imageSrc="./src/assets/ai-art.jpg"
       />
       <ProjectSummary
         id="project-3"
         sectionRef={projectThree}
         visible={visibleSections.includes(projectThree.current)}
         index={3}
-        title="Biomedical image collaboration"
-        description="Increasing the amount of collaboration in Slice, an app for biomedical imaging"
+        title="Visual Artifact Generation Systems and Computational Creativity"
+        description="Literature review on how AI models, from expert systems to deep learning, are changing the way we create digital visual art. It considers how we evaluate the 'creativity' of these AI systems, taking into account different aspects of what makes something truly creative."
         buttonText="View project"
         buttonLink="/projects/slice"
         model={{

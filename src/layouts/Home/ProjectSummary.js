@@ -14,9 +14,10 @@ import { useState } from 'react';
 import { cssProps, media } from 'utils/style';
 import styles from './ProjectSummary.module.css';
 
-import profileImgLarge from 'assets/360renderNew.jpeg';
-import profileImgPlaceholder from 'assets/360renderNew.jpeg';
+import profileImgLarge from 'assets/renderNew.jpeg';
+import profileImgPlaceholder from 'assets/renderNew.jpeg';
 import profileImg from 'assets/profile.jpg';
+// import { Scene, Sky } from '@belivvr/aframe-react';
 
 const Model = dynamic(() => import('components/Model').then(mod => mod.Model));
 
@@ -97,13 +98,20 @@ export const ProjectSummary = ({
   const renderPreview = visible => (
     <div className={styles.preview}>
       <div className={styles.custom}>
+        {/* <Scene>
+          <Sky
+            rotation="0, -30, 0"
+            id="image-360"
+            src="https://raw.githubusercontent.com/raynaney/portfolio/master/src/assets/360renderNew.jpeg"
+          ></Sky>
+        </Scene> */}
         <Image
           reveal
           delay={100}
           placeholder={profileImgPlaceholder}
           srcSet={[profileImg, profileImgLarge]}
           sizes={`(max-width: ${media.mobile}px) 100vw, 480px`}
-          alt="Me standing in front of the Torii on Miyajima, an island off the coast of Hiroshima in Japan"
+          alt=""
         />
         <svg
           aria-hidden="true"
