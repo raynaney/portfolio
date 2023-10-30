@@ -1,4 +1,3 @@
-import projectKatakana from 'assets/katakana-project.svg?url';
 import { Button } from 'components/Button';
 import { Divider } from 'components/Divider';
 import { Heading } from 'components/Heading';
@@ -14,9 +13,11 @@ import { useState } from 'react';
 import { cssProps, media } from 'utils/style';
 import styles from './ProjectSummary.module.css';
 
+import projectKatakana from 'assets/katakana-project.svg?url';
 import profileImgLarge from 'assets/renderNew.jpeg';
 import profileImgPlaceholder from 'assets/renderNew.jpeg';
 import profileImg from 'assets/profile.jpg';
+
 // import { Scene, Sky } from '@belivvr/aframe-react';
 
 const Model = dynamic(() => import('components/Model').then(mod => mod.Model));
@@ -33,6 +34,8 @@ export const ProjectSummary = ({
   buttonLink,
   alternate,
   custom,
+  placeholder,
+  srcSet,
   ...rest
 }) => {
   const [focused, setFocused] = useState(false);
@@ -108,11 +111,12 @@ export const ProjectSummary = ({
         <Image
           reveal
           delay={100}
-          placeholder={profileImgPlaceholder}
-          srcSet={[profileImg, profileImgLarge]}
+          placeholder={placeholder}
+          srcSet={srcSet}
           sizes={`(max-width: ${media.mobile}px) 100vw, 480px`}
           alt=""
         />
+
         <svg
           aria-hidden="true"
           width="0"

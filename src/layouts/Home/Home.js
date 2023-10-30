@@ -1,15 +1,9 @@
-import gamestackTexture2Large from 'assets/gamestack-list-large.jpg';
-import gamestackTexture2Placeholder from 'assets/gamestack-list-placeholder.jpg';
-import gamestackTexture2 from 'assets/gamestack-list.jpg';
-import gamestackTextureLarge from 'assets/gamestack-login-large.jpg';
-import gamestackTexturePlaceholder from 'assets/gamestack-login-placeholder.jpg';
-import gamestackTexture from 'assets/gamestack-login.jpg';
-import sliceTextureLarge from 'assets/slice-app-large.jpg';
-import sliceTexturePlaceholder from 'assets/slice-app-placeholder.jpg';
-import sliceTexture from 'assets/slice-app.jpg';
-import sprTextureLarge from 'assets/spr-lesson-builder-dark-large.jpg';
-import sprTexturePlaceholder from 'assets/spr-lesson-builder-dark-placeholder.jpg';
-import sprTexture from 'assets/spr-lesson-builder-dark.jpg';
+import profileImgPlaceholder from 'assets/profile.jpg';
+
+import aiArt from 'assets/ai-art.jpg';
+import render1 from 'assets/renderEEG.png';
+import render2 from 'assets/renderNew.jpeg';
+
 import { Footer } from 'components/Footer';
 import { Meta } from 'components/Meta';
 import { Intro } from 'layouts/Home/Intro';
@@ -86,7 +80,8 @@ export const Home = () => {
         description="Exploring how we perceive our own heart rate during digital experiences, like in virtual reality, and how these perceptions can be influenced or even mistaken. The findings could potentially shape more immersive digital experiences and therapies that respond to our bodily reactions."
         buttonText="View project"
         buttonLink="/projects/smart-sparrow"
-        imageSrc=""
+        placeholder={render1}
+        srcSet={[render1, render1]}
       />
       <ProjectSummary
         id="project-2"
@@ -97,8 +92,9 @@ export const Home = () => {
         title="Cardiac Interoception in Virtual Reality"
         description="Exploring how we perceive our own heart rate during digital experiences, like in virtual reality, and how these perceptions can be influenced or even mistaken. The findings could potentially shape more immersive digital experiences and therapies that respond to our bodily reactions."
         buttonText="View website"
-        buttonLink="https://gamestack.hamishw.com"
-        imageSrc="./src/assets/ai-art.jpg"
+        buttonLink=""
+        placeholder={render2}
+        srcSet={[render2, render2]}
       />
       <ProjectSummary
         id="project-3"
@@ -109,11 +105,8 @@ export const Home = () => {
         description="Literature review on how AI models, from expert systems to deep learning, are changing the way we create digital visual art. It considers how we evaluate the 'creativity' of these AI systems, taking into account different aspects of what makes something truly creative."
         buttonText="View project"
         buttonLink="/projects/slice"
-        model={{
-          type: 'handle',
-          alt: 'Annotating a biomedical image in the Slice app',
-          textures: [{}],
-        }}
+        placeholder={aiArt}
+        srcSet={[aiArt, aiArt]}
       />
       <Profile
         sectionRef={details}
