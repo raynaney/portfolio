@@ -1,7 +1,7 @@
 import profileImgPlaceholder from 'assets/profile.jpg';
 
 import aiArt from 'assets/ai-art.jpg';
-import render1 from 'assets/renderEEG.png';
+import render1 from 'assets/renderEEG.jpeg';
 import render2 from 'assets/renderNew.jpeg';
 
 import { Footer } from 'components/Footer';
