@@ -34,7 +34,7 @@ const ProfileText = ({ visible, titleId }) => (
     </Text>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
       In my spare time I like to create ceramics, go bike riding, and make websites. I’m
-      always down for hearing about new projects, so feel free to drop me a line.
+      always down to hear about new projects, so feel free to drop me a line.
     </Text>
   </Fragment>
 );
