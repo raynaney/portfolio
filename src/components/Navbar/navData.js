@@ -16,12 +16,12 @@ export const navLinks = [
 export const socialLinks = [
   {
     label: 'LinkedIn',
-    url: '',
+    url: 'https://www.linkedin.com/in/rayna-ney/',
     icon: 'linkedIn',
   },
   {
     label: 'Github',
-    url: 'https://github.com/HamishMW',
+    url: 'https://github.com/raynaney',
     icon: 'github',
   },
 ];
