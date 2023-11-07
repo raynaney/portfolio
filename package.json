@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
-  "homepage": "https://raynaney.github.io/portfolio/",
+  "homepage": "https://raynaney.github.io",
   "description": "Portfolio of Rayna Ney",
   "author": "Rayna Ney, adpated from the work of Hamish Williams <hello@hamishw.com>",
   "devDependencies": {
