@@ -79,7 +79,7 @@ export const Home = () => {
         title="EEG-based Evaluation of Motor Skill Acquisition in Virtual and Physical Environments "
         description="Exploring how we perceive our own heart rate during digital experiences, like in virtual reality, and how these perceptions can be influenced or even mistaken. The findings could potentially shape more immersive digital experiences and therapies that respond to our bodily reactions."
         buttonText="View project"
-        buttonLink="/projects/smart-sparrow"
+        buttonLink=""
         placeholder={render1}
         srcSet={[render1, render1]}
       />
@@ -104,7 +104,7 @@ export const Home = () => {
         title="Visual Artifact Generation Systems and Computational Creativity"
         description="Literature review on how AI models, from expert systems to deep learning, are changing the way we create digital visual art. It considers how we evaluate the 'creativity' of these AI systems, taking into account different aspects of what makes something truly creative."
         buttonText="View project"
-        buttonLink="/projects/slice"
+        buttonLink=""
         placeholder={aiArt}
         srcSet={[aiArt, aiArt]}
       />
